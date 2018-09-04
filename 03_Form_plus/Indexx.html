@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+</head>
+<body>
+    <h1>Inscripcion</h1>
+    <form method="get" action="">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <div class="control-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div class="control-group">
+                <label for="apellido">Apellidos</label>
+                <input type="text" name="apellido" id="apellido">
+            </div>
+            <div class="control-group">
+                <label for="correo">Correo</label>
+                <input type="email" name="correo" id="correo">
+            </div>
+            <div class="control-group">
+                <label for="passw">Contraseña</label>
+                <input type="password" name="passw" id="passw">
+            </div>           
+        </fieldset>
+        <fieldset>
+            <legend>Opciones</legend>
+            <div class="option-group">
+                <input type="checkbox" name="condiciones" id="condiciones">
+                <label for="condiciones">Acepto las condiciones</label>
+            </div>
+            <div class="option-group">
+                <legend>Selecciona un turno</legend>
+                <input type="radio" name="turno" id="mañana" value="01">
+                <label for="mañana">Mañana</label>
+                <input type="radio" name="turno" id="tarde" value="02">
+                <label for="tarde">Tarde</label>
+                <input type="radio" name="turno" id="noche" value="03">
+                <label for="noche">Noche</label>
+            </div>
+            <div class="option-group">
+                <legend>Selecciona una sede</legend>
+                <input type="radio" name="sede" id="madrid" value="MAD">
+                <label for="madrid">Madrid</label>
+                <input type="radio" name="sede" id="barcelona" value="BCN">
+                <label for="barcelona">Barcelona</label>
+                <input type="radio" name="sede" id="cadiz" value="CAD">
+                <label for="cadiz">Cadiz</label>
+            </div>
+            <div class="control-group">
+                <label for="curso">Curso</label>
+                <select name="curso" id="curso">
+                    <optgroup label="Programación">
+                            <option value="pweb">Páginas Web</option>
+                            <option value="back">Desarrollo Back</option>
+                            <option value="mobile">Desarrollo Moviles</option>        
+                    </optgroup>
+                    <optgroup label="Sistemas">
+                        <option value="">Windows</option>
+                        <option value="">Linux</option>                        
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <legend>Aficiones</legend>
+                <input type="checkbox" name="deporte" id="deporte" class="aficiones">
+                <label for="deporte">Deporte</label>
+                <input type="checkbox" name="musica" id="musica" class="aficiones">
+                <label for="musica">Musica</label>
+                <input type="checkbox" name="lectura" id="lectura" class="aficiones">
+                <label for="lectura">Lectura</label>
+                <input type="checkbox" name="viajes" id="viajes" class="aficiones">
+                <label for="viajes">Viajes</label>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Comentarios</legend>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+        </fieldset>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
