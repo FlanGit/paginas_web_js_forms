@@ -1,4 +1,4 @@
-export class Form {
+export class Form { 
     constructor() {
         this.domForm = document.querySelector('form')
         this.data = {
@@ -12,6 +12,7 @@ export class Form {
                 f_name: ''},
             email: '',
             passw : '',
+            telefono: '',
             coments : '',
             aficiones : []
         }
@@ -21,12 +22,16 @@ export class Form {
     }
 
     enviar(oEv) {
+
+        console.log("enviar")
+
         oEv.preventDefault()
         this.data.user.name = document.querySelector('#nombre').value
         //this.data.user.name = this.domForm.elements.nombre.value
         this.data.user.f_name = document.querySelector('#apellido').value
         this.data.email = document.querySelector('#correo').value
         this.data.passw = document.querySelector('#passw').value
+        this.data.telefono = document.querySelector('#tele').value
         this.data.coments = document.querySelector('#comentarios').value
         this.data.opciones.conditions = document.querySelector('#condiciones').checked
         this.data.opciones.turn = this.setTurno()
