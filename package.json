@@ -1,0 +1,24 @@
+{
+  "name": "paginas_web_js_forms",
+  "version": "1.0.0",
+  "description": "Unidad 2 modulo 2",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlanGit/paginas_web_js_forms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlanGit/paginas_web_js_forms/issues"
+  },
+  "homepage": "https://github.com/FlanGit/paginas_web_js_forms#readme"
+}

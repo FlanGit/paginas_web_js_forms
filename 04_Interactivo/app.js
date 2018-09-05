@@ -1,3 +1,4 @@
+
 import { GENEROS } from './datos.js'
 export class App {
     constructor() {
@@ -7,7 +8,8 @@ export class App {
             cbMas : document.querySelector('#mas'),
             slGenero : document.querySelector('#genero'),
             slAutores : document.querySelector('#autor'),
-            btnEnviar : document.querySelector('#btnEnviar')
+            btnEnviar : document.querySelector('#btnEnviar'),
+            btnRaro : document.querySelector('#btnRaro')
         }
         this.aGeneros = GENEROS
         this.generosFirst = true
@@ -22,6 +24,8 @@ export class App {
                 this.changeGenero.bind(this))
         this.dom.formFinal.addEventListener('submit',
                 this.enviar.bind(this))
+        this.dom.btnRaro.addEventListener('click', 
+                this.enviarRaro.bind(this))
     }
 
     setFormFinal () {
@@ -66,5 +70,9 @@ export class App {
         + '&autor=' +
         this.dom.slAutores[this.dom.slAutores.selectedIndex].value
         console.log(data)
+    }
+
+    enviarRaro() {
+        this.dom.formFinal.submit()
     }
 }
