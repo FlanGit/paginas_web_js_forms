@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,29 @@
 </head>
 <body>
     <h1>Formulario interactivo</h1>
-    <form action="">
+    <form action="" id="formInicio">
         <div class="option-group">
             <input type="checkbox" name="mas" id="mas">
             <label for="mas">Deseo más informacion</label>
         </div>
     </form>
-    <form action="" class="hide">
-        <p>Aqui va el formulario</p>
+    <form action="" class="hide" id="formFinal">
+        <div class="control-group">
+            <label for="genero">Genero</label>
+            <select name="genero" id="genero">
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="autor">Autor</label>
+            <select name="autor" id="autor" disabled>
+                <option value=""></option>
+                <option value="">Sin opciones</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" id="btnEnviar" disabled 
+                title="Selecciona genero y autor para activarlo">Enviar</button>
+        </div>
     </form>
 </body>
 </html>
