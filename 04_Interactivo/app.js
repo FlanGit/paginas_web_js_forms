@@ -14,7 +14,8 @@ export class App {
         this.aGeneros = GENEROS
         this.generosFirst = true
         this.defineHandlers()
-        this.crearSelect(this.aGeneros, this.dom.slGenero)
+        this.crearSelect(this.aGeneros, this.dom.slGenero) // que daros a presentar
+       // y el otro parametro es donde lo pongo
     }
 
     defineHandlers () {
@@ -50,16 +51,17 @@ export class App {
         let i = this.dom.slGenero.selectedIndex
         console.log( 'Seleccionado', i )
         if (this.generosFirst) {
-            this.aGeneros.shift()
-            this.crearSelect(this.aGeneros, this.dom.slGenero, i-1)
+            this.aGeneros.shift() // elimina el primer elemento del array
+            this.crearSelect(this.aGeneros, this.dom.slGenero, i-1) // donde lo pinte y la posicion
             this.generosFirst = false
             this.dom.btnEnviar.disabled = false
+            this.dom.slAutores.disabled = false
         }
         i = this.dom.slGenero.selectedIndex
         console.dir( i )
         console.dir( this.dom.slGenero[i])
         console.log(this.aGeneros[i].autores)
-        this.dom.slAutores.disabled = false
+        
         this.crearSelect(this.aGeneros[i].autores, this.dom.slAutores)
     }
 
