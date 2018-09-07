@@ -7,40 +7,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./app.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <form id="form1" action="" class="col-6" >
+            <form id="form1" action="" class="col-6" novalidate>
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" required
-                        class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="">
+                        class="form-control val" name="nombre" id="nombre" aria-describedby="helpId" placeholder="">
                     <small id="helpId" class="form-text text-muted hide"></small>
                 </div>
                 <div class="form-group">
                   <label for="apellido">Apellido</label>
                   <input type="text" required
-                    class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="">
+                    class="form-control val" name="apellido" id="apellido" aria-describedby="helpId" placeholder="">
                   <small id="helpId" class="form-text text-muted hide"></small>
                 </div>
                 <div class="form-group">
                   <label for="correo">Correo</label>
                   <input type="email" required
-                    class="form-control" name="correo" id="correo" aria-describedby="emailHelpId" placeholder="">
+                    class="form-control val" name="correo" id="correo" aria-describedby="emailHelpId" placeholder="">
                   <small id="emailHelpId" class="form-text text-muted hide"></small>
                 </div>
                 <div class="form-group">
                   <label for="">Telefono</label>
                   <input type="tel" placeholder="34-xxx-xxx-xxx"
                   pattern="^(\+34|0034|34)?-[6|7|9][0-9]{8}$"
-                    class="form-control" name="telefono" id="telefono" aria-describedby="helpId" placeholder="">
+                    class="form-control val" name="telefono" id="telefono" aria-describedby="helpId" placeholder="">
                   <small id="helpId" class="form-text text-muted hide"></small>
                 </div>
                 <div class="form-group">
                   <label for="">Numero</label>
                   <input type="text" required minlength="2" maxlength="4"
-                    class="form-control" name="numero" id="numero" aria-describedby="helpId" placeholder="">
+                    class="form-control val" name="numero" id="numero" aria-describedby="helpId" placeholder="">
                   <small id="helpId" class="form-text text-muted hide"></small>
                 </div>
                 <div class="form-check">
