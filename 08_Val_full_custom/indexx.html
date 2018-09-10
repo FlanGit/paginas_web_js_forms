@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form id="form1" action="" class="col-6" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" required
+                        class="form-control val" name="nombre" id="nombre" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted hide"></small>
+                </div>
+                <div class="form-group">
+                  <label for="apellido">Apellido</label>
+                  <input type="text" required
+                    class="form-control val" name="apellido" id="apellido" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted hide"></small>
+                </div>
+                
+                <div class="form-group">
+                  <label for="dni">D.N.I.</label>
+                  <input type="text"
+                    class="form-control" name="dni" id="dni" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted hide"></small>
+                </div>
+                
+                <div class="form-group">
+                  <label for="correo">Correo</label>
+                  <input type="email" required
+                    class="form-control val" name="correo" id="correo" aria-describedby="emailHelpId" placeholder="">
+                  <small id="emailHelpId" class="form-text text-muted hide"></small>
+                </div>
+                <div class="form-group">
+                  <label for="">Telefono</label>
+                  <input type="tel" placeholder="34-xxx-xxx-xxx"
+                  pattern="^(\+34|0034|34)?-[6|7|9][0-9]{8}$"
+                    class="form-control val" name="telefono" id="telefono" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted hide"></small>
+                </div>
+                <div class="form-group">
+                  <label for="">Numero</label>
+                  <input type="text" required minlength="2" maxlength="4"
+                    class="form-control val" name="numero" id="numero" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted hide"></small>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                    Display value
+                  </label>
+                </div>
+                <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
