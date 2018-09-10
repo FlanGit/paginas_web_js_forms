@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ex">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom Validiti</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Alta de usuarios</h1>
+            <form action="" class="col-12">
+                    <div class="form-group">
+                            <label for="user2">Nombre requerido</label>
+                            <input type="text" 
+                            class="form-control" name="user2" id="user2" aria-describedby="helpId" placeholder="">
+                            <small id="helpId" class="form-text text-muted"></small>
+                        </div>
+
+                <div class="form-group">
+                    <label for="user">Nombre de usuario</label>
+                    <input type="text" 
+                    class="form-control" name="user" id="user" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                    <label for="dni">D.N.I.</label>
+                    <input type="text" 
+                    class="form-control" name="dni" id="dni" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted"></small>
+                </div>
+                <div class="form-group">
+                  <label for="passw">Contraseña</label>
+                  <input type="text" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                    class="form-control" name="passw" id="passw" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="passw2">Confirmar contraseña</label>
+                    <input type="text" required pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        class="form-control" name="passw2" id="passw2" placeholder="">
+                </div>
+                <button id="btnEnviar" type="submit" class="btn btn-primary">Enviar</button>
+            </form>     
+        </div>
+    </div>
+</body>
+</html>
