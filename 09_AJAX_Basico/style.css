@@ -1,0 +1,5 @@
+div {margin: 2rem}
+p.output {
+    min-height: 3rem;
+    background-color: bisque;
+}
