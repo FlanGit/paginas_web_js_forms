@@ -14,7 +14,9 @@ function main () {
 
         let ajax = new XMLHttpRequest()
         console.dir(ajax)
-        ajax.onreadystatechange = mostrarDatos
+
+        // ajax.onreadystatechange = mostrarDatos
+        ajax.addEventListener('readystatechange', mostrarDatos)  // valores 1,2 3,4  tomar el estado 4
 
         ajax.open('GET','datos.json')
         ajax.send(null)
