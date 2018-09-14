@@ -25,16 +25,23 @@ export class App {
     pedirDatos(oEv) {
         switch (oEv.target.id) {
             case 'btnDatos':
-                new AjaxService('GET', DATOS, 'txt',  
-                    this.mostrarDatos.bind(this))
-                break;
+                new AjaxService('GET', DATOS, 'txt').send()
+                .then(
+                    (response) => {this.mostrarDatos(response)}
+                ).catch(
+                    (error) => {this.mostrarError(error)}
+                )
+                break
             case 'btnJson':
-                new AjaxService('GET', JSON , 'json', 
-                    this.mostrarDatos.bind(this))
+                new AjaxService('GET', JSON , 'json').send().then(
+                    (response) => {this.mostrarDatos(response)},
+                    (error) => {this.mostrarError(error)}
+                ) 
                 break;  
             case 'btnError':  
-                new AjaxService('GET', 'error', '', 
-                    this.mostrarError.bind(this))
+                new AjaxService('GET', 'error', '').send().catch(
+                    (error) => {this.mostrarError(error)}
+                )
             break;                   
         }
     } 
