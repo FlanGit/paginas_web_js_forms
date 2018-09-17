@@ -1,6 +1,7 @@
 export class App {
     constructor() {
         this.URLBase = 'https://www.googleapis.com/books/v1/volumes?q='
+        this.libroBase = 'https://www.edicionesencuentro.com/portadas/NODISPONIBLE.gif'
         this.nClave = document.querySelector('#clave')
         this.nBtnBuscar = document.querySelector('#btnBuscar')
         this.nOutput = document.querySelector('#output')
@@ -29,19 +30,24 @@ export class App {
             item => {
                 return {
                     autores: item.volumeInfo.authors,
-                    titulo: item.volumeInfo.title 
+                    titulo: item.volumeInfo.title, 
+                    icono: item.volumeInfo.imageLinks ? 
+                    item.volumeInfo.imageLinks.smallThumbnail: this.libroBase
                 }
             }
         )
         console.log(aLibros)
 
          aLibros.forEach(item => {
-            let autor = ''
+            let autor = '&nbsp;'
             if(item.autores) {
                 autor = item.autores.join(' | ')
             }
             html += `<dt>${item.titulo}</dt>`
             html += `<dd>${autor}</dd>`
+            html += `<img src="${item.icono}">`
+            console.log(html)
+            console.log("-----------1------------")
         });
         html += '</dl>'
         this.nOutput.innerHTML = html
