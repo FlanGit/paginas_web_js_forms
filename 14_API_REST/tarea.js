@@ -9,7 +9,7 @@ export class Tarea {
         let html = `
             <li>
             <input type="checkbox" name="isCompleta" id="isCompleta"
-                ${this.isComplete ? 'checked' : '' }>
+            ${this.isComplete ? 'checked' : '' }>
             <span class="nombreTarea">${this.name}</span>
             <span>🗑️</span>
             </li>
