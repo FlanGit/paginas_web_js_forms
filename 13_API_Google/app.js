@@ -18,25 +18,13 @@ export class App {
             url = this.URLBase + this.clave
             fetch(url, {method: 'GET'}).then(
                 response => response.json()
-            ).then(data =>  this.mostrar(data))
+            ).then(data =>  this.render(data))
         }
     }
 
-    mostrar(data) {
-        let aLibros
+    render(data) {
+        let aLibros = this.prepararDatos(data)
         let html = '<dl>'
-        console.log(data.items)
-        aLibros = data.items.map(
-            item => {
-                return {
-                    autores: item.volumeInfo.authors,
-                    titulo: item.volumeInfo.title, 
-                    icono: item.volumeInfo.imageLinks ? 
-                    item.volumeInfo.imageLinks.smallThumbnail: this.libroBase
-                }
-            }
-        )
-        console.log(aLibros)
 
          aLibros.forEach(item => {
             let autor = '&nbsp;'
@@ -46,11 +34,27 @@ export class App {
             html += `<dt>${item.titulo}</dt>`
             html += `<dd>${autor}</dd>`
             html += `<img src="${item.icono}">`
-            console.log(html)
-            console.log("-----------1------------")
         });
         html += '</dl>'
         this.nOutput.innerHTML = html
         this.nClave.value = ''
+    }
+
+    prepararDatos(data) {
+        let aLibros
+        console.log(data)
+        console.log(data.items)
+        aLibros = data.items.map(
+            item => {
+                return {
+                    autores: item.volumeInfo.authors,
+                    titulo: item.volumeInfo.title, 
+                    icono: item.volumeInfo.imageLinks ? 
+                        item.volumeInfo.imageLinks.smallThumbnail: this.libroBase
+                }
+            }
+        )
+        console.log(aLibros)
+        return aLibros
     }
 }
