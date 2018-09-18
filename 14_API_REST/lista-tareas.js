@@ -20,6 +20,7 @@ export class ListaTareas {
     }
     
     renderLista() {
+        this.nodoListaTareas.innerHTML = ''
         let html = ''
         this.aTareas.forEach(
             item =>  html += this.renderTarea(item)
@@ -58,10 +59,12 @@ export class ListaTareas {
         let url = this.uRL + '/' + oEv.target.dataset.id
         this.fetchService.send(url, {method: 'DELETE' })
             .then(
-                data => console.log(data),
+                data => { 
+                    console.log(data)
+                    this.getTareas() 
+                },
                 error => console.log(error)
             )
-        this.getTareas()
     }
 
 }
