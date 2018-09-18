@@ -33,5 +33,15 @@
       "name": "Reunion de trabajo",
       "isComplete": false
     }
+  ],
+  "tareas_BK": [
+    {
+      "name": "Clases curso Paginas",
+      "isComplete": false
+    },
+    {
+      "name": "Reunion de trabajo",
+      "isComplete": false
+    }
   ]
 }
