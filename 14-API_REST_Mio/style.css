@@ -1,0 +1,19 @@
+body {
+    margin: 2rem 3rem;
+    background-color: bisque
+}
+
+ul.tareas {
+    list-style: none;
+}
+
+ul.tareas li {
+     display: flex;
+     justify-content: space-between;
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+}
+
+ul.tareas li span.borrar-tarea {
+    cursor: pointer;
+}
