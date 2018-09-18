@@ -1,7 +1,9 @@
 {
   "articulos": [
     {
-      "author": {"name": "Alejandro"},
+      "author": {
+        "name": "Alejandro"
+      },
       "id": 2,
       "title": " Todos los lunes "
     },
@@ -22,8 +24,14 @@
   "profile": {
     "name": "typicode"
   },
-  "tareas" : [
-    {"name": "Clases curso Paginas", "isComplete": false},
-    {"name": "Reunion de trabajo", "isComplete": false}
+  "tareas": [
+    {
+      "name": "Clases curso Paginas",
+      "isComplete": false
+    },
+    {
+      "name": "Reunion de trabajo",
+      "isComplete": false
+    }
   ]
 }
