@@ -13,7 +13,7 @@ export class FetchService {
             fetch(this.url, this.config)
             .then(
                 (response) => {
-                    if (response.status === 200) {
+                    if (response.status >= 200 && response.status <= 299 ) {
                         return response.json()
                     } else {
                         reject( 

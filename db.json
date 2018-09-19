@@ -26,20 +26,39 @@
   },
   "tareas": [
     {
+      "id": 1,
       "name": "Clases curso Paginas",
       "isComplete": false
     },
     {
+      "id": 2,
       "name": "Reunion de trabajo",
       "isComplete": false
-    }
-  ],
-  "tareas_BK": [
-    {
-      "name": "Clases curso Paginas",
-      "isComplete": false
     },
     {
+      "name": "aprender angular",
+      "isComplete": false,
+      "id": 3
+    },
+    {
+      "name": "Aprender Excel",
+      "isComplete": false,
+      "id": 4
+    },
+    {
+      "name": "Aprender word",
+      "isComplete": false,
+      "id": 5
+    }
+  ],
+  "tareas2": [
+    {
+      "id": 1,
+      "name": "Clases curso Paginas",
+      "isComplete": true
+    },
+    {
+      "id": 2,
       "name": "Reunion de trabajo",
       "isComplete": false
     }
