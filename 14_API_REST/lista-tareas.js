@@ -7,9 +7,18 @@ export class ListaTareas {
         this.nodoBtnAdd = document.querySelector('#btnAdd')
         this.nodoNewTarea = document.querySelector('#inTarea')
         this.nodoBtnAdd.addEventListener('click', this.addTarea.bind(this))
+ 
+        this.nodoBtnDlt = document.querySelector('#btnDltSlt')
+        this.nodoBtnDlt.addEventListener('click', this.dltTareas.bind(this))
+
+        this.nodoBtnSearch = document.querySelector('#btnSearch')
+        this.nodoNewbusqueda = document.querySelector('#inBuscar')
+        this.nodoBtnSearch.addEventListener('click', this.getSearch.bind(this))
+
         this.uRL = 'http://localhost:3000/tareas'
         this.aTareas = []
         this.fetchService = new FetchService()
+       
         this.getTareas()
     }
 
@@ -18,13 +27,24 @@ export class ListaTareas {
             .then( data => {
                 this.aTareas = data
                 console.dir(this.aTareas)
-               /*  this.aTareas = this.aTareas.filter(
+                this.renderLista()
+            },
+            error => {console.dir(error)}
+            )
+    }
+
+    getSearch() {
+        this.fetchService.send(this.uRL, {method: 'GET' })
+            .then( data => {
+                this.aTareas = data
+                console.dir(this.aTareas)
+                 this.aTareas = this.aTareas.filter(
                     (item) => {
-                        console.log(item.name.indexOf('Aprender')) 
-                        if (item.name.indexOf('Aprender') >= 0 ) { return true} 
+                        console.log(item.name.indexOf(inBuscar.value)) 
+                        if (item.name.indexOf(inBuscar.value) >= 0 ) { return true} 
                         else { return false }
                     }
-                ) */
+                ) 
                 console.dir(this.aTareas)
 
                 this.renderLista()
@@ -49,6 +69,8 @@ export class ListaTareas {
             item => item.addEventListener('click', this.borrarTarea.bind(this))
         )
     }
+
+
 
     renderTarea(data) {
         let htmlView =  `
@@ -80,17 +102,15 @@ export class ListaTareas {
         }).then(
             response => {
                 console.log(response)
-
+                if (!inBuscar.value)
                 this.getTareas()
-            },
+                else
+                this.getSearch()
+       },
             error => console.log(error)
         )
-
-        
-
-
-
     }
+
 
     checkTarea(oEv) {
         console.log(oEv.target.dataset.id)
@@ -106,10 +126,14 @@ export class ListaTareas {
                 method: 'PATCH', 
                 headers : headers,
                 body: JSON.stringify(datos)
-            }).then( // () => this.getTareas()
+               }).then( // () => this.getTareas()
                     response => {
                     console.log(response)
+                    if (!inBuscar.value)
                     this.getTareas()
+                    else
+                    this.getSearch()
+
                 },
                 error => console.log(error)
             )
@@ -124,10 +148,35 @@ export class ListaTareas {
             .then(
                 data => { 
                     console.log(data)
+                    if (!inBuscar.value)
                     this.getTareas() 
+                    else
+                    this.getSearch()
+
                 },
                 error => console.log(error)
             )
     }
- 
+
+    
+    dltTareas(){
+        console.log(this.aTareas )
+         
+        for (let i = 0; i < this.aTareas.length; i++) {
+            if(this.aTareas[i].isComplete){
+                let url2 = this.uRL + '/' + this.aTareas[i].id
+                this.fetchService.send(url2, {method: 'DELETE' })
+                    .then(
+                        data => 
+                        {if (!inBuscar.value)
+                        this.getTareas()
+                        else
+                        this.getSearch()},
+                        
+                        error => console.log(error)
+                    )
+            }
+        }
+    }
+
 }

@@ -27,40 +27,70 @@
   "tareas": [
     {
       "id": 1,
-      "name": "Clases curso Paginas",
+      "name": "Clases curso Paginasx 1",
       "isComplete": false
     },
     {
-      "id": 2,
-      "name": "Reunion de trabajo",
-      "isComplete": false
-    },
-    {
-      "name": "aprender angular",
+      "name": "Clases curso Paginasx 2",
       "isComplete": false,
+      "id": 2
+    },
+    {
+      "name": "Clases curso Paginasy 3",
+      "isComplete": true,
       "id": 3
     },
     {
-      "name": "Aprender Excel",
-      "isComplete": false,
+      "name": "Clases curso Paginasy 4",
+      "isComplete": true,
       "id": 4
     },
     {
-      "name": "Aprender word",
+      "name": "Clases curso Paginasz 5",
       "isComplete": false,
       "id": 5
+    },
+    {
+      "name": "Clases curso Paginasz 6",
+      "isComplete": false,
+      "id": 6
+    },
+    {
+      "name": "Clases curso Paginasz 7",
+      "isComplete": false,
+      "id": 7
     }
   ],
   "tareas2": [
     {
       "id": 1,
-      "name": "Clases curso Paginas",
-      "isComplete": true
+      "name": "Clases curso Paginasx 1",
+      "isComplete": false
     },
     {
-      "id": 2,
-      "name": "Reunion de trabajo",
-      "isComplete": false
+      "name": "Clases curso Paginasx 2",
+      "isComplete": false,
+      "id": 2
+    },
+    {
+      "name": "Clases curso Paginasy 3",
+      "isComplete": false,
+      "id": 3
+    },
+    {
+      "name": "Clases curso Paginasy 4",
+      "isComplete": false,
+      "id": 4
+    },
+    {
+      "name": "Clases curso Paginasz 5",
+      "isComplete": false,
+      "id": 5
+    },
+    {
+      "name": "Clases curso Paginasz 6",
+      "isComplete": false,
+      "id": 6
     }
   ]
 }
