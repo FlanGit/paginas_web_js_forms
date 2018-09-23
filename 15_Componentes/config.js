@@ -3,7 +3,7 @@ export const APPTITLE = "Componentes"
 export const ITEMS = [
     [
       "Home",
-      "index.html"
+      "indexx.html"
     ],
     [
       "Catálogo",
