@@ -1,0 +1,32 @@
+@import "tareas.css";
+
+body {
+    background-color: bisque
+}
+header {
+    background-color: brown;
+    color: bisque;
+}
+
+nav ul {
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 1rem;
+}
+
+main {
+     margin: 2rem 2rem;
+     min-height: 50vh;
+}
+
+footer {
+    border-top: 1px solid brown;
+    margin-top: 2rem;
+}
