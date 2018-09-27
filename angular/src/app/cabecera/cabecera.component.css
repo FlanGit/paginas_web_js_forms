@@ -1,9 +1,11 @@
-header {
-    margin-top: 0;
-    padding: 2rem 3rem;
+:host {
+    background-color: brown;
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 h1 {
     margin: 0;
-    text-align: center;
+    color: bisque;
 }

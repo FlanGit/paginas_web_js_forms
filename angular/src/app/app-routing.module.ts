@@ -3,12 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { ListaTareasComponent } from './lista-tareas/lista-tareas.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'con', component: ContactsComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'tareas', component: ListaTareasComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: 'about', component: AboutComponent },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({

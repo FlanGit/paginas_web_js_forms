@@ -12,6 +12,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { SaludoComponent } from './saludo/saludo.component';
+import { MainComponent } from './main/main.component';
+import { SaludoLocalComponent } from './saludo-local/saludo-local.component';
+import { ListaTareasComponent } from './lista-tareas/lista-tareas.component';
+import { TareasSimpleComponent } from './tareas-simple/tareas-simple.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { SaludoComponent } from './saludo/saludo.component';
     HomeComponent,
     AboutComponent,
     ContactsComponent,
-    SaludoComponent
+    SaludoComponent,
+    SaludoLocalComponent,
+    MainComponent,
+    ListaTareasComponent,
+    TareasSimpleComponent
   ],
   imports: [
     BrowserModule,
