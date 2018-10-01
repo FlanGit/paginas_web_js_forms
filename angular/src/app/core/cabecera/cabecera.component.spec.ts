@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CabeceraComponent } from './cabecera.component';
+import { LogoComponent } from '../logo/logo.component';
 
 describe('CabeceraComponent', () => {
   let component: CabeceraComponent;
@@ -8,7 +9,10 @@ describe('CabeceraComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CabeceraComponent ]
+      declarations: [ 
+        CabeceraComponent,  
+        LogoComponent
+      ]
     })
     .compileComponents();
   }));
@@ -22,4 +26,7 @@ describe('CabeceraComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it(`should have as title 'angular'`, async(() => {
+    expect(component.titulo).toContain('Angular');
+  }));
 });
