@@ -14,4 +14,3 @@ export class TareaModel implements TareaIf {
     public isCompleted: boolean
     ) {}
 }
-
