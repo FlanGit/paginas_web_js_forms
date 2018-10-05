@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactoIf } from '../../models/contacto.model';
-import { HttpClient } from '@angular/common/http';
 import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
@@ -10,18 +9,18 @@ import { UsuariosService } from '../../services/usuarios.service';
 })
 export class ListaContactosComponent implements OnInit {
 
- 
-aContactos:Array<ContactoIf>
-  constructor(public usuarios: UsuariosService){ }
-
-  // servicio Http -> antiguo
-  // servicio HttpClient -> actual
+  aContactos: Array<ContactoIf>
+  constructor(public usuarios: UsuariosService) { }
 
   ngOnInit() {
     this.aContactos = []
-    this.usuarios.getLista().then( 
-      (response:any)=>{this.aContactos= response}
-  )}
+    /* this.usuarios.getLista().then(
+      (response:any )=> {this.aContactos = response}
+    )} */
+    this.usuarios.getListaAA().then(
+      (response:any)=> {this.aContactos = response}
+    )}
+
 
   borrarContacto(badEmail) {
     

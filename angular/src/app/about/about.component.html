@@ -1,4 +1,22 @@
 <p>
-  about works!
+  Trabajar con Acerca de .. {{!empresa ? 'mi empresa de mi propiedad' : empresa}}
+</p>
+<p>
+  Empresa Cliente: {{ cliente?.nombre }}
+</p>
+<p>
   <mat-checkbox>Me gusta material</mat-checkbox>
 </p>
+<cas-articulo 
+  [titulo]="'Angular Fundamentos'" 
+  [autor]="'Juan Perez'">
+  <h2>Acerca de Angular</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius culpa fugiat possimus recusandae. In veniam eveniet quia earum nihil nulla fugit inventore voluptates, nemo, sapiente at, accusamus eius iusto deserunt!</p>
+  <p>Optio praesentium ab, maiores architecto, corrupti sed fugiat aliquam, aspernatur aut quasi quos in expedita. Odit ex quae aut adipisci cupiditate, voluptatibus alias ad nostrum ipsum corporis quasi placeat repellat?</p>
+  <p>Magnam animi corporis quo dignissimos hic distinctio facilis illum repellendus, numquam recusandae aut ipsum perspiciatis, temporibus est non. Saepe, iure illum repellat vitae sunt consequuntur ipsum non. Non, pariatur deserunt!</p>
+  <p>Nobis architecto est aperiam voluptatem repellendus quidem deserunt iste, praesentium odit nam quos soluta iure alias! Quia, quaerat sunt architecto consectetur saepe, reiciendis eaque explicabo soluta suscipit doloremque ducimus obcaecati!</p>
+</cas-articulo>
+<cas-articulo 
+  [titulo]="'Angular Avanzado'" 
+  [autor]="'Pepe Perez'">
+</cas-articulo>

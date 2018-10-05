@@ -1,6 +1,10 @@
-<ul *ngFor="let item of aContactos" class="col-6">
+
+<!-- <ul *ngFor="let item of aContactos">
     <li>
-<!--     el padre se comunica con el hijo por propiedades-->
-         <cas-contacto [contacto]="item" (eventoBorrar)="borrarContacto($event)"  ></cas-contacto>  
+        <cas-contacto [contacto]="item"></cas-contacto>
     </li>
-</ul>
+</ul> -->
+<ng-content></ng-content>
+<div *ngFor="let item of aContactos.slice(0)" class="col-6">
+    <cas-contacto [contacto]="item" (eventoBorrar)="borrarContacto($event)"></cas-contacto>
+</div>

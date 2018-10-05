@@ -18,7 +18,7 @@ export class TareasPlusComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.titulo = 'Lista plusssss'
+    this.titulo = 'Lista plus'
     this.rutaGoogle = 'https://www.google.es'
     // this.newTarea = new TareaModel('', false )
     this.newTarea = {nombre: '', isCompleted: false}
