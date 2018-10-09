@@ -15,5 +15,5 @@ export class CabeceraComponent implements OnInit {
     this.titulo = `Proyecto ${this.fw}`
   }
 
-}
+} 
  
