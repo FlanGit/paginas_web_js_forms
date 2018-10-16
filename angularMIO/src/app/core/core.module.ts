@@ -28,4 +28,4 @@ import { AppRoutingModule } from '../app-routing.module';
   bootstrap : []
 })
 export class CoreModule { }
-   
+    
