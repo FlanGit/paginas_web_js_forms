@@ -14,18 +14,18 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   declarations: [
     CabeceraComponent,
-    LogoComponent,
-    PieComponent, 
     MenuComponent,
-    MainComponent,
-
-  ],
+    MainComponent,    
+    PieComponent,     
+    LogoComponent],
+  providers: [],
   exports :[
     CabeceraComponent,
     MenuComponent,
     MainComponent,
     PieComponent
   ],
+  bootstrap : []
 })
 export class CoreModule { }
-  
+   

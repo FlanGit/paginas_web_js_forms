@@ -11,9 +11,9 @@ export class LogoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.logo = '../../assets/logo.svg'
+    this.logo = '././assets/logo.svg'
     this.logoText = 'Logotipo de Angular'
   }
 
 }
- 
+  
