@@ -10,13 +10,16 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import { HomeModule } from './home/home.module';
+import { TareasComponent } from './tareas/tareas.component';
+import { TareasModule } from './tareas/tareas.module';
 
 // the second parameter 'fr' is optional
 registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TareasComponent
    
   ], 
   imports: [
@@ -24,9 +27,9 @@ registerLocaleData(localeEs, 'es');
     FormsModule,
     CoreModule,
     HomeModule,
-  /*    ContactsModule,
+  /*    ContactsModule,*/
 
-        TareasModule, */
+    TareasModule, 
     BrowserAnimationsModule,
     MatButtonModule, 
     MatCheckboxModule
